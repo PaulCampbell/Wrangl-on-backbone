@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="/styles/site.css" type="text/css" /> 
+		<link rel="stylesheet" href="styles/site.css" type="text/css" /> 
 		<!-- library scripts -->
 		<script src="javascript/lib/json2.js"></script> 
 		<script src="javascript/lib/jquery.js"></script> 
@@ -22,20 +22,24 @@
 				<h1>{{ title }}</h1>
 				<time>{{dateFormat(created_at,"shortTime")}}</time>
 				<p>{{ description }}</p>
+				<ul><li>{{ yes_option_text }}</li>
+				<li> {{ no_option_text }}</li></ul>
+				<div>
 				<ul> {{#arguments}}<li>{{title}}</li>{{/arguments}} </ul>
+				</div>
 			</article>
 		</script>
 
 	</head>
 	<body>
 		<header>
-			<h1>Wrangl on Backbone</h1>
+			<h1><a href="#/">Wrangl on Backbone</a></h1>
 		</header>
 		<div id="app">
 			
 		</div>
 		<footer>
-			Built by <a href="http://twitter.com/#!/Slarty_Bartfast">Paul Campbell</a>
+			<a href="http://twitter.com/#!/Slarty_Bartfast">pc</a>
 		</footer>
 	</body>
 	
@@ -43,12 +47,6 @@
 		 $(function() {
 			App.init();
 			
-			// grab all the templates, ready for use...
-			$.getJSON('/templates.json', function (templates) {
-				$.each(templates, function (template) {
-					ich.addTemplate(template.name, template.template);
-				});
-			});
 		});
 		
 		

@@ -1,17 +1,20 @@
 var Debate = Backbone.Model.extend({
-
     url: function () {
-        return 'http://wrangl.com/datamapper-activerecord/json' ;
-    },
+		return 'http://wrangl.com/' + this.get('slug') + '/json';
+		},
     
-    top_level_arguments: function() { 
-    	return _.select(this.arguments, function(a){ 
-            		return (a); 
-            	});
-    },
+  
     
     date_posted: function() {
     	return new Date(); //eval(s.created_at.replace(/\/Date\((\d+)\)\//gi, "new Date($1)"));
+    },
+    
+    yes_option_text: function(){
+     return this.get('yes_text') || 'Yes';
+    },
+    
+    no_option_text: function(){
+     return this.get('no_text') || 'No';
     }
     
 });

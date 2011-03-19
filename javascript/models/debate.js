@@ -15,6 +15,10 @@ var Debate = Backbone.Model.extend({
     
     no_option_text: function(){
      return this.get('no_text') || 'No';
+    },
+    
+    yes_arguments: function(){
+    	// _.each(this.aarguments)
     }
     
 });

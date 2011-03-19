@@ -19,13 +19,17 @@
 		
 		<script id="debateview" type="text/html">
 			<article>
+			<div class="top">
 				<h1>{{ title }}</h1>
 				<time>{{dateFormat(created_at,"shortTime")}}</time>
 				<p>{{ description }}</p>
-				<ul><li>{{ yes_option_text }}</li>
-				<li> {{ no_option_text }}</li></ul>
-				<div>
+				<ul class="tabs"><li><a href="#">{{ yes_option_text }}</a></li>
+				<li> <a href="#">{{ no_option_text }}</a></li></ul>
+				
+				<div class="lower" style="clear:both;">
+				<div ></div>
 				<ul> {{#arguments}}<li>{{title}}</li>{{/arguments}} </ul>
+				</div>
 				</div>
 			</article>
 		</script>

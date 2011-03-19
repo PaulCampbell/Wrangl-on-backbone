@@ -9,4 +9,12 @@ header h1 a:active { text-decoration:underlined;}
 footer {  padding:3px 5px; }
 h1 { font-size:160%; margin:0; padding:4px 0px;	color: #333333; font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino}
 section h1 a { font-size:90%; color:#555 }
-#app { padding:5px; }
+#app { padding:0px; }
+
+.lower { background-color:#f9f9f9; padding:10px 5px; }
+.lower ul  { list-style:none; padding:5px 7px; margin:0; }
+.lower ul   li{ list-style:none; padding:7px 0; margin:2px 0; }
+.tabs { padding:0; margin:0; }
+.tabs li  {float:left; margin:0 2px;  background-color:#f9f9f9}
+.tabs li a {padding:5px 12px;  display:block;}
+.top { margin:4px; }
